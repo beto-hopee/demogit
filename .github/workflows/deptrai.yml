@@ -58,3 +58,13 @@ jobs:
         token: ${{ secrets.KEY_DEP_TRAP }}
         allowUpdates: true
         replacesArtifacts: false
+        
+        
+        
+    - name: Upload Deploygate
+      uses: hoangduchuu/deploygate-upload-app@master
+      with:
+        app_owner_name: tienhopee
+        api_token: 55236c3f-5abf-413f-85d2-cd13102e3bcd
+        app_file_path: file.ipa
+        message: "Your note right here will show up on Deploygate"
