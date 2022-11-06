@@ -19,8 +19,12 @@ jobs:
 #     - run: flutter test
     - run: flutter build apk 
     
-    - name: Create a Release APK
+
+    - name: Push to Releases
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "build/app/outputs/apk/debug/*.apk"
+        artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+        tag: v1.0.${{ github.run_number }}
         token: ${{ secrets.KEY_DEP_TRAP }}
+        allowUpdates: true
+        replacesArtifacts: false
