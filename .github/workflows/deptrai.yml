@@ -66,5 +66,5 @@ jobs:
       with:
         app_owner_name: tienhopee
         api_token: 55236c3f-5abf-413f-85d2-cd13102e3bcd
-        app_file_path: file.ipa
+        app_file_path: build/app/outputs/flutter-apk/app-release.apk
         message: "Your note right here will show up on Deploygate"
